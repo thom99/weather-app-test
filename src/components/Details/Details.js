@@ -5,13 +5,8 @@ import { selectWeatherTurin } from "../../state/selectors/selector";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faWind, faMagnifyingGlass, faLocationDot } from '@fortawesome/free-solid-svg-icons'
 
-const Details = ({ dayWeek, month, number, hour }) => {
-    const [text, setText] = useState('')
+const Details = ({ dayWeek, month, number }) => {
     const weatherTurin = useSelector(selectWeatherTurin)
-
-    const handleChange = (e) => {
-        setText(e.target.value)
-    }
 
     return (
         <>
@@ -90,12 +85,7 @@ const Details = ({ dayWeek, month, number, hour }) => {
                                 <span>Search</span>
                             </div>
                             <div className="search" >
-                                <input onChange={handleChange} className="search_input" placeholder="ex. Miami"></input>
-                                {/* {text.length <= 0 ?
-                                    <span className="placeholder">ex. Miami</span>
-                                    :
-                                    ''
-                                } */}
+                                <input className="search_input" placeholder="ex. Miami"></input>
                                 <button className="icon_search">
                                     <FontAwesomeIcon icon={faMagnifyingGlass} />
                                 </button>
