@@ -1,5 +1,4 @@
 import axios from 'axios'
-const apiKey = "66a07e951bc70a87c9f33d8cf514c10a"
 
 export async function getCoordinatesTurin() {
     const url = `http://api.openweathermap.org/geo/1.0/direct?q=Turin&appid=${apiKey}`
